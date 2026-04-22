@@ -1,7 +1,50 @@
 import java.util.Arrays;
+import java.util.Random;
 public class Sorter {
     //aruzhan abd it-2501
+    //Class 1: randmm
+    private final Random random = new Random();
+    public int[] generateRandomArray(int size) {
+        int[] arr = new int[size];
+        for (int i = 0; i < size; i++) {
+            arr[i] = random.nextInt(size * 10);
+        }
+        return arr;
+    }
+    public int[] generateSortedArray(int size) {
+        int[] arr = new int[size];
+        for (int i = 0; i < size; i++) {
+            arr[i] = i + 1;
+        }
+        return arr;
+    }
+    //Class 1: Print array
+    public void printArray(int[] arr) {
+        if (arr.length <= 20) {
+            // print full array for small sizes
+            StringBuilder sb = new StringBuilder("[");
+            for (int i = 0; i < arr.length; i++) {
+                sb.append(arr[i]);
+                if (i < arr.length - 1) sb.append(", ");
+            }
+            sb.append("]");
+            System.out.println(sb);
+        } else {
+            StringBuilder sb = new StringBuilder("[");
+            for (int i = 0; i < 10; i++) {
+                sb.append(arr[i]).append(", ");
+            }
+            sb.append("... , ");
+            for (int i = arr.length - 10; i < arr.length; i++) {
+                sb.append(arr[i]);
+                if (i < arr.length - 1) sb.append(", ");
+            }
+            sb.append("]");
+            System.out.println(sb);
+        }
+    }
     //insertion sort
+
     public void basicSort(int[] arr) {
         int n = arr.length;
         for (int i = 1; i < n; i++) {
