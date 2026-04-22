@@ -2,6 +2,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // Initialize core classes
         Sorter sorter = new Sorter();
         Searcher searcher = new Searcher();
         Experiment experiment = new Experiment();
@@ -9,7 +10,7 @@ public class Main {
         System.out.println("\n--- SORTING & SEARCHING ALGORITHM ANALYSIS SYSTEM ---");
         System.out.println("Algorithms: Insertion Sort, Merge Sort, Binary Search\n");
 
-        System.out.println("--- DEMO 1: Insertion Sort (10 elements) ---");
+        System.out.println("--- Basic Sort 1: Insertion Sort (10 elements) ---");
         int[] smallRandom = sorter.generateRandomArray(10);
         System.out.print("Before sorting: ");
         sorter.printArray(smallRandom);
@@ -19,7 +20,7 @@ public class Main {
         sorter.printArray(smallRandom);
         System.out.printf("Time: %,d ns%n%n", time1);
 
-        System.out.println("--- DEMO 2: Merge Sort (10 elements) ---");
+        System.out.println("--- Advanced sort 2: Merge Sort (10 elements) ---");
         int[] smallRandom2 = sorter.generateRandomArray(10);
         System.out.print("Before sorting: ");
         sorter.printArray(smallRandom2);
@@ -29,7 +30,7 @@ public class Main {
         sorter.printArray(smallRandom2);
         System.out.printf("Time: %,d ns%n%n", time2);
 
-        System.out.println("--- DEMO 3: Sorting a MEDIUM random array (100 elements) ---");
+        System.out.println("--- Sort 3: Sorting a MEDIUM random array (100 elements) ---");
         int[] mediumRandom1 = sorter.generateRandomArray(100);
         int[] mediumRandom2 = mediumRandom1.clone();
 
@@ -42,7 +43,7 @@ public class Main {
         sorter.printArray(mediumRandom1);
         System.out.println();
 
-        System.out.println("--- DEMO 4: Sorting a LARGE random array (1,000 elements) ---");
+        System.out.println("--- Random Arrya 4: Sorting a LARGE random array (1,000 elements) ---");
         int[] largeRandom1 = sorter.generateRandomArray(1000);
         int[] largeRandom2 = largeRandom1.clone();
 
@@ -55,18 +56,18 @@ public class Main {
         sorter.printArray(largeRandom1);
         System.out.println();
 
-        System.out.println("--- DEMO 5: Sorting an ALREADY-SORTED array (1,000 elements) ---");
+        System.out.println("--- Sorted 5: Sorting an ALREADY-SORTED array (1,000 elements) ---");
         int[] sortedArr1 = sorter.generateSortedArray(1000);
         int[] sortedArr2 = sortedArr1.clone();
 
         long timeBasicSorted = experiment.measureSortTime(sortedArr1, "basic");
         long timeAdvancedSorted = experiment.measureSortTime(sortedArr2, "advanced");
 
-        System.out.printf("Insertion Sort time: %,d ns (best case — O(n))%n", timeBasicSorted);
+        System.out.printf("Insertion Sort time: %,d ns (best case - O(n))%n", timeBasicSorted);
         System.out.printf("Merge Sort time:     %,d ns (always O(n log n))%n", timeAdvancedSorted);
         System.out.println();
 
-        System.out.println("--- DEMO 6: Binary Search on sorted arrays ---");
+        System.out.println("--- Search 6: Binary Search on sorted arrays ---");
         int[] searchArr = sorter.generateSortedArray(1000);
         int target1 = 500;
         int target2 = 9999;
