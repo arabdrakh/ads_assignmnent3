@@ -9,7 +9,7 @@ Advanced - Merge Sort
 Search - Binary search
 ## Core Class Implementations
 - ## Class 1
-![img.png](docs/screenshots/img_19.png)
+
 - ### Category A: Basic Sorting - Insertion sort
 
 We need to take the second element and call it our key. We have to compare this key with all the numbers that are sitting to its left.
@@ -28,7 +28,7 @@ Once we find the right spot (where the number on the left is smaller), we insert
 
 
 ### Code:
-![img.png](docs/screenshots/img.png)
+![img.png](docs/screenshots/img_19.png)
 
 ### Result:
 ![img_1.png](docs/screenshots/img_14.png)
