@@ -5,7 +5,7 @@ public class Experiment {
 
     private final Sorter sorter = new Sorter();
     private final Searcher searcher = new Searcher();
-    private static final int[] SIZES = { 10, 100, 1_000, 10_000 };
+    private static final int[] SIZES = { 80, 800, 8000, 80000 };
 
     public long measureSortTime(int[] arr, String type) {
 
@@ -30,7 +30,7 @@ public class Experiment {
 
     // Aruzhan Abdrakhmanova
     public void runAllExperiments() {
-        System.out.println("\n--- SORTING PERFORMANCE RESULTS ---");
+        System.out.println("\n SORTING PERFORMANCE RESULTS ");
         System.out.printf("%-15s %-15s %-25s %-25s%n", "Array Size", "Input Type", "Insertion Sort (ns)",
                 "Merge Sort (ns)");
 
@@ -53,7 +53,7 @@ public class Experiment {
             System.out.printf("%-15d %-15s %-25s %-25s%n",
                     size, "Sorted", formatNano(basicSortedTime), formatNano(advancedSortedTime));
         }
-        System.out.println("\n--- SEARCHING PERFORMANCE RESULTS ---");
+        System.out.println("\n SEARCHING PERFORMANCE RESULTS ");
         System.out.printf("%-15s %-15s %-25s %-15s%n", "Array Size", "Scenario", "Binary Search (ns)", "Result Index");
         for (int size : SIZES) {
             int[] sortedArr = sorter.generateSortedArray(size);
