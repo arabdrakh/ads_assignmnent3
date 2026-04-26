@@ -2,7 +2,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // Initialize core classes
         Sorter sorter = new Sorter();
         Searcher searcher = new Searcher();
         Experiment experiment = new Experiment();

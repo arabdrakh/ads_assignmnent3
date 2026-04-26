@@ -18,9 +18,4 @@ public class Searcher {
 
         return -1;
     }
-    public static void main(String [] args){
-        Searcher searcher = new searcher();
-        int [] = {1, 4, 6, 9, 11, 12}
-
-    }
 }

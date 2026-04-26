@@ -9,6 +9,7 @@ public class Experiment {
 
     public long measureSortTime(int[] arr, String type) {
 
+
         long start = System.nanoTime();
 
         if (type.equalsIgnoreCase("basic")) {
